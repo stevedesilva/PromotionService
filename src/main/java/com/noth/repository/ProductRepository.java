@@ -6,14 +6,14 @@ import java.util.Optional;
 
 /**
  * ProductRepository represent a product catalogue which can be pulled from various implementations (e.g. cache, database, config, etc...)
- *
  */
 public interface ProductRepository {
     /**
      * getProductItemByCode returns productItem object from underlying repository
      * Returns ProductItem
+     *
      * @param code
-     * @return
+     * @return Optional Product
      */
     Optional<Product> getProductItemByCode(String code);
 }

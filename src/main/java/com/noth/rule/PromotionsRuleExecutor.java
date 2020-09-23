@@ -9,10 +9,9 @@ import java.util.List;
 
 /**
  * RuleExecutor Implementation
- *  responsible for running the Rules.
- *  Rules can either operate on the price (Pre total rules) or on the grand total(Post total rules).
+ * responsible for running the Rules.
+ * Rules can either operate on the price (Pre total rules) or on the grand total(Post total rules).
  * There may be other variants in the future. For now this partition meets the use case, but can be extending in the future.
- *
  */
 public class PromotionsRuleExecutor implements RuleExecutor {
     private List<Rule> priceRules;
@@ -50,13 +49,13 @@ public class PromotionsRuleExecutor implements RuleExecutor {
     }
 
     private void applyPostTotalRules(Basket basket) {
-        for (Rule rule: getTotalRules()) {
+        for (Rule rule : getTotalRules()) {
             rule.applyRule(basket); //TODO change
         }
     }
 
     private void applyProductPriceRules(Basket basket) {
-        for (Rule rule: getPriceRules()) {
+        for (Rule rule : getPriceRules()) {
             rule.applyRule(basket);
         }
     }

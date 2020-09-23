@@ -1,6 +1,5 @@
 package com.noth.model;
 
-
 public enum ProductCode {
     TravelCardHolder("001"),
     PersonalisedCufflinks("002"),
@@ -8,7 +7,7 @@ public enum ProductCode {
 
     public final String code;
 
-    ProductCode(String code){
+    ProductCode(String code) {
         this.code = code;
     }
 }

@@ -1,8 +1,6 @@
 package com.noth.model;
 
-
 import java.math.BigDecimal;
-import java.util.Objects;
 
 /**
  * Product models a Product in the Product Catalogue

@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 public interface Checkout {
     /**
      * scan will look up item from the attached repository adding it to the users basket
+     *
      * @param productItemCode
      */
     void scan(String productItemCode);
@@ -17,6 +18,7 @@ public interface Checkout {
     /**
      * Returning total applying relevant rules for items in the users basket.
      * Returns BigDecimal instead of double for precision reasons.
+     *
      * @return
      */
     BigDecimal total();

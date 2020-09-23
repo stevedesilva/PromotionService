@@ -1,6 +1,5 @@
 package com.noth.repository;
 
-
 import com.noth.model.BasketItem;
 import com.noth.rule.Rule;
 import com.noth.rule.PromotionsRule;

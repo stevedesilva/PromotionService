@@ -25,12 +25,10 @@ public class PromotionsCheckoutBasket implements Basket {
         if (checkoutBasket.getCheckoutBasket().containsKey(code)) {
             BasketItem basketItem = checkoutBasket.getCheckoutBasket().get(code);
             basketItem.setCount(basketItem.getCount() + ONE_ITEM);
-        }
-        else {
+        } else {
             // Add to basket
             final Optional<Product> productItem = productRepository.getProductItemByCode(code);
-            productItem.ifPresent(item -> checkoutBasket.getCheckoutBasket().put(code,new BasketItem(item, ONE_ITEM))); // magic number
-            // else exception?
+            productItem.ifPresent(item -> checkoutBasket.getCheckoutBasket().put(code, new BasketItem(item, ONE_ITEM))); // magic number
         }
     }
 
@@ -38,7 +36,7 @@ public class PromotionsCheckoutBasket implements Basket {
     public BigDecimal calculateTotal() {
 
         BigDecimal total = BigDecimal.ZERO;
-        for (String code: checkoutBasket.getCheckoutBasket().keySet()) {
+        for (String code : checkoutBasket.getCheckoutBasket().keySet()) {
 
             BasketItem basketItem = checkoutBasket.getCheckoutBasket().get(code);
             BigDecimal subtotal = basketItem.calculateSubTotal();
@@ -59,8 +57,7 @@ public class PromotionsCheckoutBasket implements Basket {
 
     @Override
     public void setTotal(BigDecimal value) {
-         this.checkoutBasket.setBasketTotal(value);
+        this.checkoutBasket.setBasketTotal(value);
     }
-
 
 }

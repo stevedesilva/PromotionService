@@ -13,7 +13,7 @@ import java.util.function.Predicate;
 public class PromotionsRule implements Rule {
     private Predicate<Basket> matched;
 
-    private Function<Basket,BigDecimal> action;
+    private Function<Basket, BigDecimal> action;
 
     public PromotionsRule(Predicate<Basket> matched, Function<Basket, BigDecimal> action) {
         this.matched = matched;

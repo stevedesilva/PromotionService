@@ -1,6 +1,5 @@
 package com.noth.model;
 
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
