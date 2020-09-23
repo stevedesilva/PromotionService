@@ -1,11 +1,11 @@
-# N.O.T.H Promotions Service
+# Promotional Service
 
 
 The Promotion Service is written Java 11. It models a simple checkout basket which allows the application of 
 promotion rules to manipulate the total price paid by the customer. 
 
 
-## Decisions/Notes
+## Key Decisions
 - The checkout interface uses BigDecimal instead of double for precision reasons.
 
 - The product items have been hardcoded in a local repository (as oppose to an in-memory database).
